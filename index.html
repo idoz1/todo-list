@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Todo list</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <style>
+      .material-symbols-outlined {
+          font-variation-settings:
+                  'FILL' 0,
+                  'wght' 400,
+                  'GRAD' 0,
+                  'opsz' 24
+      }
+  </style>
+</head>
+<body>
+<header class="border-bottom-2 pt-5 pb-10 container mx-auto">
+
+  <a href="#" class="text-4xl">Todo List</a>
+</header>
+
+<main class="container mx-auto">
+  <form class="grid grid-cols-3 gap-4 items-center">
+
+    <input class="p-2 border-2  col-start-1 col-end-3" type="text" placeholder="Task name" name="name" id="first-input">
+    <textarea class="p-2 border-2 col-start-1 col-end-5 resize-none" placeholder="Task description" name="desc" id="second-input"></textarea>
+
+    <label class="col-start-3 cols-end-4 row-start-1">
+      <input type="checkbox" name="done" id="is-task-done">
+      Is task done?
+    </label>
+    <div class="flex items-center col-span-4">
+      <button class="p-2 bg-emerald-500 w-full text-white text-2xl font-bold">Add +</button>
+    </div>
+  </form>
+
+
+  <section class="border-t-4 pt-10 mt-10">
+    <div id="todosList">
+    </div>
+  </section>
+
+</main>
+
+
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
