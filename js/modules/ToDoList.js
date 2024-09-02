@@ -51,9 +51,7 @@ export default class ToDoList {
     return this.#todos
   }
   startEdit(todoId) {
-    //There the task
     const indexToEdit = this.#todos.findIndex(item => +item.id === +todoId)
-
     if(indexToEdit >= 0) {
       document.getElementById("first-input").value = this.#todos[indexToEdit].name
       document.getElementById("second-input").value = this.#todos[indexToEdit].desc
@@ -64,8 +62,9 @@ export default class ToDoList {
     return this.#todos
   }
 
-  getTodos() {
-    return this.#todos
+  getTodos(todoId) {
+    const indexToFind = this.#todos.findIndex(item => +item.id === +todoId)
+    return this.#todos[indexToFind]
   }
 
   renderTodo() {
